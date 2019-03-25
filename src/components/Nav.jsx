@@ -6,7 +6,7 @@ const Nav = (props) => {
         <div>
             {props.currencies.map((item) => 
             
-                <button>{item.code}</button>
+                <button key={item.id}>{item.code}</button>
             )}
         </div>
     )
