@@ -13,9 +13,7 @@ class App extends Component {
 			{ symbol: '€', name: 'Euro', code: 'EUR', amount: 251.15 },
 		];
 
-		this.state = {
-			currencies: currencies
-		};
+		this.state = { currencies: currencies };
 	};
 
 	render() {
