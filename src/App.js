@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/styles.css';
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
 import Carousel from './components/Carousel.jsx';
@@ -26,7 +26,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div className="container">
 				<Header />
 				<Nav currencies={this.state.currencies} />
 				<Carousel currencies={this.state.currencies} />

@@ -1,0 +1,30 @@
+/* First media query variable */
+
+/* 768px / 16px = 48em */
+
+$mq-1: 48em !default;
+$mq-2: 62em !default;
+
+/* This media query will apply only to extra small devices */
+
+@mixin extra-small-only {
+    @media only screen and (max-width: $mq-1 - 0.0625) {
+        @content;
+    }
+}
+
+/* This media query will apply to small and above devices */
+
+@mixin small-and-above {
+    @media only screen and (min-width: $mq-1) {
+        @content;
+    }
+}
+
+/* This media query will apply to medium and above devices */
+
+@mixin medium-and-above {
+    @media only screen and (min-width: $mq-2) {
+        @content;
+    }
+}

@@ -1,0 +1,15 @@
+$gutter: 30px;
+$gutter-margin: ($gutter / 2);
+/* Content Container */
+
+.container {
+    
+    @include small-and-above {
+        padding-right: $gutter-margin;
+        padding-left: $gutter-margin;
+    }
+
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
