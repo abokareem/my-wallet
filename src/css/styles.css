@@ -469,6 +469,12 @@ a:hover {
   }
 }
 
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 .background-primary {
   background: #F7832F;
   color: white;
@@ -481,6 +487,7 @@ a:hover {
 
 .background-tertiary {
   background: #71B7C2;
+  color: white;
 }
 
 .background-quaternary {
@@ -530,6 +537,7 @@ h1 {
 .btn-nav {
   background-color: transparent;
   color: #333645;
+  margin-right: 0.25em;
 }
 
 .btn-nav:hover {
@@ -539,9 +547,51 @@ h1 {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 1em;
   align-items: center;
+}
+
+.card-container {
+  width: 18em;
+  height: 20em;
+  border-radius: 2.5em;
+  padding: 2.5em;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin: 1em;
+  -webkit-box-shadow: 0 0 2em 0 #ECECEC;
+  -moz-box-shadow: 0 0 2em 0 #ECECEC;
+  box-shadow: 0 0 2em 0 #ECECEC;
+}
+
+.card-description {
+  font-size: 1em;
+}
+.card-description p {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.card-symbol {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid white;
+  text-decoration: none;
+  border-radius: 0.25em;
+  font-size: 1.3em;
+  padding: 0.25em 0.5em;
+  transition: all 0.3s ease 0s;
+}
+
+.card-amount {
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

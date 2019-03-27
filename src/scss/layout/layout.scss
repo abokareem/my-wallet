@@ -3,7 +3,7 @@ $gutter-margin: ($gutter / 2);
 /* Content Container */
 
 .container {
-    
+
     @include small-and-above {
         padding-right: $gutter-margin;
         padding-left: $gutter-margin;
@@ -12,4 +12,10 @@ $gutter-margin: ($gutter / 2);
     margin-right: auto;
     margin-left: auto;
     max-width: 1170px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
