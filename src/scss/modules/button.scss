@@ -14,21 +14,35 @@
 
 .btn-header {
     color: white;
-    background-color: transparent;
+    background-color: $orange;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-header:hover {
-    color: $dark-blue;
-    background-color: white;
+    color: white;
+    background-color: $dark-blue;
 }
 
 .btn-nav {
     background-color: transparent;
-    color: $dark-blue;
+    color: white;
     margin-right: .25em;
 }
 
 .btn-nav:hover {
-    background-color: $dark-blue;
-    color: white;
+    color: orange;
+    border: 1px solid transparent
+}
+
+.btn-nav:hover::after {
+    content: "";
+    display: inline-block;
+    width: .25em;
+    height: .25em;
+    border-radius: 50%;
+    background-color: $orange;
+    margin-left: .5em;
 }

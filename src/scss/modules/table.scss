@@ -1,0 +1,34 @@
+table {
+    @include extra-small-only {
+        width: 100%;
+        margin: 0;
+    }
+
+    padding: 1em;
+    background-color: white;
+    border-radius: .5em;
+    opacity: .2;
+    
+    transition: all 0.3s ease 0s;
+}
+table:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+th,
+td {
+    text-align: left;
+    padding: .5em;
+    border-bottom: 1px solid $light-grey;
+    @include small-and-above {
+        min-width: 10em;
+    }
+    @include extra-small-only {
+        min-width: 3em;
+    }
+}
+
+tr:hover {
+    background-color: $light-grey
+}

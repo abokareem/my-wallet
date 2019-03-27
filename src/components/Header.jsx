@@ -3,9 +3,9 @@ import React from 'react';
 const Header = () => {
 
     return (
-        <div className="header background-secondary">
+        <div className="header text-overlap">
             <h1>myWallet</h1>
-            <i className="btn btn-header fa fa-angle-up fa-lg"></i>               
+            <button className="btn btn-header fa fa-angle-double-up fa-lg"></button>               
         </div>
     )
 }

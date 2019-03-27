@@ -10,10 +10,10 @@ const Carousel = (props) => {
                 <div className={
 
 
-                    (item.id % 5 === 1) ? "card-container background-primary" :
-                        (item.id % 5 === 2) ? "card-container background-secondary" :
-                            (item.id % 5 === 3) ? "card-container background-tertiary" :
-                                (item.id % 5 === 4) ? "card-container background-quaternary" : "card-container background-tertiary"
+                    (item.id % 5 === 1) ? "card-container background-primary mask" :
+                        (item.id % 5 === 2) ? "card-container background-secondary mask" :
+                            (item.id % 5 === 3) ? "card-container background-tertiary mask" :
+                                (item.id % 5 === 4) ? "card-container background-quaternary mask" : "card-container background-tertiary mask"
 
                 } key={item.id}>
                     <div className="card-description">

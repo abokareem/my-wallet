@@ -18,7 +18,7 @@ class App extends Component {
 		var transactions = [
 			{id: 0, code: 'BRL', amount: -94.75, date: (new Date(2019, 2, 25, 10, 33, 45)).toDateString()},
 			{id: 1, code: 'BRL', amount: 84.43, date: (new Date(2019, 3, 26, 7, 21, 32).toDateString())},
-			{id: 2, code: 'USD', amount: 15.10, date: (new Date(2019, 3, 29, 9, 42, 15)).toDateString()},
+			{id: 2, code: 'USD', amount: 15.12, date: (new Date(2019, 3, 29, 9, 42, 15)).toDateString()},
 		]
 
 		this.state = { currencies: currencies, transactions: transactions };
@@ -26,7 +26,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="container bg-image">
 				<Header />
 				<Nav currencies={this.state.currencies} />
 				<Carousel currencies={this.state.currencies} />

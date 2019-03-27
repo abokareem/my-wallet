@@ -437,7 +437,7 @@ html {
 
 body {
   color: #333645;
-  font-family: Noto Sans;
+  font-family: Noto Sans, Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
 
@@ -461,6 +461,7 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
   max-width: 1170px;
+  height: 100vh;
 }
 @media only screen and (min-width: 48em) {
   .container {
@@ -506,8 +507,9 @@ h1 {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 2.5em;
+  padding: 2em;
   align-items: center;
+  color: white;
 }
 
 .btn {
@@ -526,36 +528,51 @@ h1 {
 
 .btn-header {
   color: white;
-  background-color: transparent;
+  background-color: #F7832F;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-header:hover {
-  color: #333645;
-  background-color: white;
+  color: white;
+  background-color: #333645;
 }
 
 .btn-nav {
   background-color: transparent;
-  color: #333645;
+  color: white;
   margin-right: 0.25em;
 }
 
 .btn-nav:hover {
-  background-color: #333645;
-  color: white;
+  color: orange;
+  border: 1px solid transparent;
+}
+
+.btn-nav:hover::after {
+  content: "";
+  display: inline-block;
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
+  background-color: #F7832F;
+  margin-left: 0.5em;
 }
 
 .nav {
   display: flex;
   justify-content: flex-start;
   margin: 1em;
-  align-items: center;
+  align-items: flex-start;
+  text-align: center;
 }
 
 .card-container {
-  width: 18em;
-  height: 20em;
-  border-radius: 2.5em;
+  width: 16em;
+  height: 18em;
+  border-radius: 2em;
   padding: 2.5em;
   flex: 0 0 auto;
   display: flex;
@@ -563,13 +580,12 @@ h1 {
   justify-content: space-between;
   text-align: left;
   margin: 1em;
-  -webkit-box-shadow: 0 0 2em 0 #ECECEC;
-  -moz-box-shadow: 0 0 2em 0 #ECECEC;
-  box-shadow: 0 0 2em 0 #ECECEC;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-description {
   font-size: 1em;
+  position: relative;
 }
 .card-description p {
   display: inline-block;
@@ -592,6 +608,68 @@ h1 {
 
 .card-amount {
   font-size: 1.5em;
+  position: relative;
+}
+
+table {
+  padding: 1em;
+  background-color: white;
+  border-radius: 0.5em;
+  opacity: 0.2;
+  transition: all 0.3s ease 0s;
+}
+@media only screen and (max-width: 47.9375em) {
+  table {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+table:hover {
+  opacity: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em;
+  border-bottom: 1px solid #ECECEC;
+}
+@media only screen and (min-width: 48em) {
+  th,
+td {
+    min-width: 10em;
+  }
+}
+@media only screen and (max-width: 47.9375em) {
+  th,
+td {
+    min-width: 3em;
+  }
+}
+
+tr:hover {
+  background-color: #ECECEC;
+}
+
+.bg-image {
+  background-image: url("../images/bg-image.svg");
+  background-repeat: no-repeat;
+}
+
+.mask {
+  position: relative;
+}
+.mask:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+  top: 0;
+  left: 0;
+  background-image: url("../images/bg-card.svg");
+  content: "";
 }
 
 /*# sourceMappingURL=styles.css.map */
