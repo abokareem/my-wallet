@@ -21,7 +21,9 @@ html {
 Base Styles
 ****************************
 ***************************/
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     color: $text-color;
     font-family: Noto Sans;

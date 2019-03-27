@@ -431,6 +431,10 @@ html {
 Base Styles
 ****************************
 ***************************/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #333645;
   font-family: Noto Sans;
@@ -496,7 +500,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 2.5em;
-  margin-bottom: 1.25em;
   align-items: center;
 }
 
@@ -522,6 +525,23 @@ h1 {
 .btn-header:hover {
   color: #333645;
   background-color: white;
+}
+
+.btn-nav {
+  background-color: transparent;
+  color: #333645;
+}
+
+.btn-nav:hover {
+  background-color: #333645;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

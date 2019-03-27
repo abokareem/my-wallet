@@ -21,3 +21,13 @@
     color: $dark-blue;
     background-color: white;
 }
+
+.btn-nav {
+    background-color: transparent;
+    color: $dark-blue;
+}
+
+.btn-nav:hover {
+    background-color: $dark-blue;
+    color: white;
+}
