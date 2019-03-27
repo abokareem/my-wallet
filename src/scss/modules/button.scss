@@ -1,0 +1,23 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: .25em;
+    padding: .25em .5em;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-header {
+    color: white;
+    background-color: transparent;
+}
+
+.btn-header:hover {
+    color: $dark-blue;
+    background-color: white;
+}
