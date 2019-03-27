@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 /* First media query variable */
 /* 768px / 16px = 48em */
 /* This media query will apply only to extra small devices */
@@ -432,7 +433,7 @@ Base Styles
 ***************************/
 body {
   color: #333645;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Noto Sans;
   font-weight: normal;
 }
 
@@ -485,6 +486,17 @@ a:hover {
 
 .background-quinary {
   background: #ECECEC;
+}
+
+h1 {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em;
+  margin-bottom: 1.25em;
 }
 
 /*# sourceMappingURL=styles.css.map */

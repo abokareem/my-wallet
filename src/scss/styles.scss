@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
 @import "base/variables";
 @import "base/media-queries";
 @import "base/mixins";
@@ -5,3 +7,4 @@
 @import "base/base";
 @import "layout/layout";
 @import "themes/themes";
+@import "modules/header";
