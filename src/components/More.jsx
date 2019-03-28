@@ -4,7 +4,7 @@ const More = (props) => {
 
     return (
         <div>
-            <button className="btn btn-header fa fa-plus"></button>               
+            <button className="btn btn-more fa fa-plus fa-lg"></button>               
         </div>
     )
 }

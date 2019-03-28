@@ -49,3 +49,20 @@
     background-color: $orange;
     margin-left: .5em;
 }
+
+.btn-more {
+    position: absolute;
+    bottom: .5em;
+    right: .5em;
+    color: white;
+    background-color: $dark-blue;
+    border: 2px solid $light-grey;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.btn-more:hover {
+    opacity: 1;
+}

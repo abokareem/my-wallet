@@ -585,6 +585,23 @@ h1 {
   margin-left: 0.5em;
 }
 
+.btn-more {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  color: white;
+  background-color: #333645;
+  border: 2px solid #ECECEC;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.btn-more:hover {
+  opacity: 1;
+}
+
 .nav {
   display: flex;
   justify-content: flex-start;
