@@ -4,7 +4,11 @@
     padding: .5em;
     margin: .5em;
     text-align: center;
-    border-radius: $card-radius;
+    border-radius: .5em;
     background-color: $light-grey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    > p {
+        margin-top: 0;
+    }
 }

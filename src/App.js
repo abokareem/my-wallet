@@ -4,6 +4,7 @@ import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
 import Carousel from './components/Carousel.jsx';
 import Transactions from './components/Transactions.jsx';
+import More from './components/More.jsx';
 
 class App extends Component {
 	constructor(props) {
@@ -43,6 +44,7 @@ class App extends Component {
 				<Nav currencies={this.state.currencies}/>
 				<Carousel currencies={this.state.currencies} />
 				<Transactions transactions={this.state.transactions} pending={this.state.pending}/>
+				<More />
 			</div>
 		);
 	}

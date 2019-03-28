@@ -607,6 +607,7 @@ h1 {
   margin: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all 0.3s ease 0s;
+  overflow-y: hidden;
 }
 
 .card-container-collapsed {
@@ -622,6 +623,7 @@ h1 {
   margin: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: all 0.3s ease 0s;
+  overflow-y: hidden;
 }
 
 .card-description {
@@ -734,9 +736,12 @@ tr:hover {
   padding: 0.5em;
   margin: 0.5em;
   text-align: center;
-  border-radius: 2em;
+  border-radius: 0.5em;
   background-color: #ECECEC;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-pending > p {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
