@@ -10,6 +10,22 @@
     text-align: left;
     margin: 1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease 0s;
+}
+
+.card-container-collapsed {
+    width: 16em;
+    height: 5em;
+    border-radius: $card-radius;
+    padding: 0 1em;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease 0s;
 }
 
 .card-description {
@@ -19,7 +35,10 @@
     p {
         display: inline-block;
         margin-right: .5em;
+        transition: all 0.3s ease 0s;
     }
+
+    transition: all 0.3s ease 0s;
 }
 
 .card-symbol {
@@ -39,4 +58,5 @@
 .card-amount {
     font-size: 1.5em;
     position: relative;
+    transition: all 0.3s ease 0s;
 }

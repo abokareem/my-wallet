@@ -1,7 +1,8 @@
 .nav {
     display: flex;
     justify-content: flex-start;
-    margin: 1em;
+    margin: 0 1em 1em;
     align-items: flex-start;
     text-align: center;
+    transition: all 0.3s ease 0s;
 }

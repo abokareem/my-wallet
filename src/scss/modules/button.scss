@@ -13,12 +13,12 @@
 }
 
 .btn-header {
-    color: white;
-    background-color: $orange;
+    color: $dark-blue;
+    background-color: transparent;
+    border: 2px solid $light-grey;
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-header:hover {
@@ -30,11 +30,14 @@
     background-color: transparent;
     color: white;
     margin-right: .25em;
+    text-decoration: none;
+    font-weight: normal;
 }
 
 .btn-nav:hover {
     color: orange;
-    border: 1px solid transparent
+    border: 1px solid transparent;
+    text-decoration: none;
 }
 
 .btn-nav:hover::after {

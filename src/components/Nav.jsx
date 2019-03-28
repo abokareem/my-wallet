@@ -6,7 +6,7 @@ const Nav = (props) => {
         <div className="nav">
             {props.currencies.map((item) => 
             
-                <button className="btn btn-nav" key={item.id}>{item.code}</button>
+                <a className="btn btn-nav" href={"#" + item.code} key={item.id}>{item.code}</a>
             )}
         </div>
     )

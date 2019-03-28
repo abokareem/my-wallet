@@ -474,6 +474,27 @@ a:hover {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-left: 1em;
+}
+
+.hide {
+  display: none;
+}
+
+.trans-container {
+  position: relative;
+}
+.trans-container > p {
+  color: #333645;
+  margin: 0 1em;
+  padding: 0.25em 0.5em;
+  font-weight: bold;
+}
+
+.trans-pending {
+  display: flex;
+  justify-content: center;
 }
 
 .background-primary {
@@ -507,7 +528,7 @@ h1 {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 1em;
   align-items: center;
   color: white;
 }
@@ -527,12 +548,12 @@ h1 {
 }
 
 .btn-header {
-  color: white;
-  background-color: #F7832F;
+  color: #333645;
+  background-color: transparent;
+  border: 2px solid #ECECEC;
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-header:hover {
@@ -544,11 +565,14 @@ h1 {
   background-color: transparent;
   color: white;
   margin-right: 0.25em;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 .btn-nav:hover {
   color: orange;
   border: 1px solid transparent;
+  text-decoration: none;
 }
 
 .btn-nav:hover::after {
@@ -564,9 +588,10 @@ h1 {
 .nav {
   display: flex;
   justify-content: flex-start;
-  margin: 1em;
+  margin: 0 1em 1em;
   align-items: flex-start;
   text-align: center;
+  transition: all 0.3s ease 0s;
 }
 
 .card-container {
@@ -581,15 +606,33 @@ h1 {
   text-align: left;
   margin: 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s ease 0s;
+}
+
+.card-container-collapsed {
+  width: 16em;
+  height: 5em;
+  border-radius: 2em;
+  padding: 0 1em;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s ease 0s;
 }
 
 .card-description {
   font-size: 1em;
   position: relative;
+  transition: all 0.3s ease 0s;
 }
 .card-description p {
   display: inline-block;
   margin-right: 0.5em;
+  transition: all 0.3s ease 0s;
 }
 
 .card-symbol {
@@ -609,13 +652,13 @@ h1 {
 .card-amount {
   font-size: 1.5em;
   position: relative;
+  transition: all 0.3s ease 0s;
 }
 
 table {
   padding: 1em;
   background-color: white;
   border-radius: 0.5em;
-  opacity: 0.2;
   transition: all 0.3s ease 0s;
 }
 @media only screen and (max-width: 47.9375em) {
@@ -623,11 +666,6 @@ table {
     width: 100%;
     margin: 0;
   }
-}
-
-table:hover {
-  opacity: 1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 th,
@@ -660,6 +698,7 @@ tr:hover {
 
 .mask {
   position: relative;
+  transition: all 0.3s ease 0s;
 }
 .mask:before {
   position: absolute;
@@ -670,6 +709,34 @@ tr:hover {
   left: 0;
   background-image: url("../images/bg-card.svg");
   content: "";
+  transition: all 0.3s ease 0s;
+}
+
+.mask-collapsed {
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.mask-collapsed:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+  top: 0;
+  left: 0;
+  background-image: url("../images/bg-card.svg");
+  content: "";
+  transition: all 0.3s ease 0s;
+}
+
+.card-pending {
+  display: inline-block;
+  min-width: 9.375em;
+  padding: 0.5em;
+  margin: 0.5em;
+  text-align: center;
+  border-radius: 2em;
+  background-color: #ECECEC;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*# sourceMappingURL=styles.css.map */

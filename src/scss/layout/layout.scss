@@ -19,4 +19,26 @@ $gutter-margin: ($gutter / 2);
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-left: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.trans-container {
+    position: relative;
+
+    > p {
+        color: $dark-blue;
+        margin: 0 1em;
+        padding: .25em .5em;
+        font-weight: bold;
+    }
+}
+
+.trans-pending {
+    display: flex;
+    justify-content: center;
 }

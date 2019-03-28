@@ -1,0 +1,10 @@
+.card-pending {
+    display: inline-block;
+    min-width: 9.375em;
+    padding: .5em;
+    margin: .5em;
+    text-align: center;
+    border-radius: $card-radius;
+    background-color: $light-grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
