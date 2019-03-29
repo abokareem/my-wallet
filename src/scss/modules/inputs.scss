@@ -1,0 +1,49 @@
+.code-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    display: inline-block;
+    padding: .25em;
+    padding-right: 1.5em;
+    margin: .25em;
+    border: 1px solid $light-grey;
+    border-radius: .25em;
+    background-color: transparent;
+    height: 2.125em;
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+
+}
+
+.num-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    display: inline-block;
+    padding: .25em;
+    margin: .25em;
+    width: 30%;
+    height: 2.125em;
+    text-align: right;
+    border: 1px solid $light-grey;
+    border-radius: .25em;
+    background-color: transparent;
+}
+
+.label-input {
+    margin-right: .25em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

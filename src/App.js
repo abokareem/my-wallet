@@ -153,8 +153,23 @@ class App extends Component {
 		// Handle add money button click
 		if (event.target.id === "add-btn") {
 
-			// Show modal
-			document.getElementById('add-money').style.display = "block";
+			// Show add money modal
+			document.getElementById('add-money').classList.toggle('modal-show');
+
+		} else if (event.target.id === "rm-btn") {
+
+			// Handle withdraw money button click (show take money modal)
+			document.getElementById('take-money').classList.toggle('modal-show');
+
+		} else if (event.target.id === "add-close") {
+
+			// Close add money modal
+			document.getElementById('add-money').classList.toggle('modal-show');
+
+		} else if (event.target.id === "rm-close") {
+
+			// Close take money modal
+			document.getElementById('take-money').classList.toggle('modal-show');
 		}
 	}
 }

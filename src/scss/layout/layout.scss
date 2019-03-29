@@ -42,3 +42,9 @@ $gutter-margin: ($gutter / 2);
     display: flex;
     justify-content: center;
 }
+
+.modal-btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}

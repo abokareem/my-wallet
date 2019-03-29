@@ -74,9 +74,36 @@
     margin: .5em;
     text-decoration: none;
     font-weight: normal;
-    transition: all 0.3s;
 }
 
 .btn-side:hover {
     color: $orange;
+}
+
+.btn-close {
+    color: white;
+    background-color: $orange;
+    border: 1px solid transparent;
+    margin: .25em;
+}
+
+.btn-close:hover {
+    color: $dark-blue;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: $light-grey;
+}
+
+.btn-trans {
+    color: white;
+    background-color: $light-blue;
+    border: 1px solid transparent;
+    margin: .25em;
+}
+
+.btn-trans:hover {
+    color: $dark-blue;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: $light-grey;
 }
