@@ -36,6 +36,9 @@ class App extends Component {
 		// Binding the toggleNav method to the App object
 		this.toggleNav = this.toggleNav.bind(this);
 
+		// Binding the toggleModal method to the App object
+		this.toggleModal = this.toggleModal.bind(this);
+
 		// Initial state of myWallet
 		this.state = { currencies: currencies, transactions: transactions, pending: pending };
 	};
@@ -47,7 +50,7 @@ class App extends Component {
 				<Nav currencies={this.state.currencies} />
 				<Carousel currencies={this.state.currencies} />
 				<Transactions transactions={this.state.transactions} pending={this.state.pending} />
-				<More toggleNav={this.toggleNav} />
+				<More toggleNav={this.toggleNav} toggleModal={this.toggleModal} />
 			</div>
 		);
 	}
@@ -142,6 +145,16 @@ class App extends Component {
 
 			// Close nav
 			document.getElementById("side-nav").style.width = "0";
+		}
+	}
+
+	toggleModal(event) {
+
+		// Handle add money button click
+		if (event.target.id === "add-btn") {
+
+			// Show modal
+			document.getElementById('add-money').style.display = "block";
 		}
 	}
 }

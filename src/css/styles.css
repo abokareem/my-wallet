@@ -606,7 +606,7 @@ h1 {
   background-color: transparent;
   text-align: right;
   color: white;
-  margin: 0.25em;
+  margin: 0.5em;
   text-decoration: none;
   font-weight: normal;
   transition: all 0.3s;
@@ -787,6 +787,55 @@ tr:hover {
   display: flex;
   flex-direction: column;
   border-radius: 1em;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: #333645;
+  background-color: white;
+  margin: 35% auto;
+  /* 15% from the top and centered */
+  padding: 1.3em;
+  border: 1px solid #6D6D6D;
+  width: 80%;
+  border-radius: 1em;
+}
+@media only screen and (min-width: 48em) {
+  .modal-content {
+    width: 30em;
+    margin: 15% auto;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #6D6D6D;
+  float: right;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #333645;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
