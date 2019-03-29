@@ -22,7 +22,7 @@ const Carousel = (props) => {
                         <p>{item.code}</p>
                     </div>
                     <div className="card-amount">
-                        <h1>{item.amount}</h1>
+                        <h1>{item.amount.toFixed(2)}</h1>
                     </div>
                 </div>
             )}

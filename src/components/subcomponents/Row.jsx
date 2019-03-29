@@ -9,7 +9,7 @@ const Row = (props) => {
                 {props.code}
             </td>
             <td>
-                {props.amount}
+                {props.amount.toFixed(2)}
             </td>
             <td>
                 {props.date}

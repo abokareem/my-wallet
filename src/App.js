@@ -39,6 +39,9 @@ class App extends Component {
 		// Binding the toggleModal method to the App object
 		this.toggleModal = this.toggleModal.bind(this);
 
+		// Binding the addTransaction method to the App object
+		this.addTransaction = this.addTransaction.bind(this);
+
 		// Initial state of myWallet
 		this.state = { currencies: currencies, transactions: transactions, pending: pending };
 	};
@@ -50,7 +53,7 @@ class App extends Component {
 				<Nav currencies={this.state.currencies} />
 				<Carousel currencies={this.state.currencies} />
 				<Transactions transactions={this.state.transactions} pending={this.state.pending} />
-				<More toggleNav={this.toggleNav} toggleModal={this.toggleModal} />
+				<More toggleNav={this.toggleNav} toggleModal={this.toggleModal} addTransaction={this.addTransaction} />
 			</div>
 		);
 	}
@@ -132,7 +135,8 @@ class App extends Component {
 			event.target.setAttribute('data-open', 'true');
 
 			// Open nav
-			document.getElementById("side-nav").style.width = "auto";
+			document.getElementById('side-nav').parentElement.classList.toggle('modal-show');
+			document.getElementById('side-nav').style.width = "auto";
 
 		} else {
 
@@ -144,33 +148,101 @@ class App extends Component {
 			event.target.setAttribute('data-open', 'false');
 
 			// Close nav
+			document.getElementById('side-nav').parentElement.classList.toggle('modal-show');
 			document.getElementById("side-nav").style.width = "0";
 		}
 	}
 
 	toggleModal(event) {
 
-		// Handle add money button click
-		if (event.target.id === "add-btn") {
+		// Handle add money button click and add modal close button
+		if (event.target.id === "add-btn" || event.target.id === "add-close") {
 
-			// Show add money modal
+			// Show / hide add money modal
 			document.getElementById('add-money').classList.toggle('modal-show');
 
-		} else if (event.target.id === "rm-btn") {
+		} else if (event.target.id === "rm-btn" || event.target.id === "rm-close") {
 
-			// Handle withdraw money button click (show take money modal)
+			// Handle withdraw money button click and withdraw modal close button (show / hide take money modal)
 			document.getElementById('take-money').classList.toggle('modal-show');
 
-		} else if (event.target.id === "add-close") {
+		} else {
 
-			// Close add money modal
-			document.getElementById('add-money').classList.toggle('modal-show');
+			// Hide open modal
+			document.querySelectorAll('.modal-show').forEach((item) => {
 
-		} else if (event.target.id === "rm-close") {
+				if (item.id === "add-money" || item.id === "take-money") {
 
-			// Close take money modal
-			document.getElementById('take-money').classList.toggle('modal-show');
+					item.classList.toggle('modal-show');
+				}
+			});
 		}
+	}
+
+	addTransaction(event) {
+
+		// Get the parent div (add-money or take-money)
+		var superParent = event.target.parentElement.parentElement.parentElement;
+
+		// Get currency code
+		var code = superParent.querySelector('#currency-code').value;
+
+		// Get amount of transaction
+		var amount = parseFloat(superParent.querySelector('#currency-amount').value);
+
+		if (amount <= 0 || isNaN(amount)) {
+
+			alert("Amount should be greater than zero.");
+			return;
+		}
+
+		// Add amount to the balance on the state currencies array
+		var currenciesCopy = this.state.currencies.slice();
+
+		// Find index that matches this transactions currency code
+		var index = currenciesCopy.findIndex((item) => {
+
+			return item.code === code;
+		});
+
+		// Transaction ID
+		var id = this.state.transactions.length;
+
+		// Transaction date
+		var date = new Date().toDateString();
+
+		// Copy transactions array so we can update it
+		var transactionsCopy = this.state.transactions.slice();
+
+		// If add money
+		if (superParent.id === "add-money") {
+
+			// Update the balance value
+			currenciesCopy[index].amount += amount;
+
+			// Add new object with ID, code, amount and date to the state transactions array
+			transactionsCopy.push(
+
+				{ id: id, code: code, amount: amount, date: date }
+			);
+
+		} else {
+
+			// Update the balance value
+			currenciesCopy[index].amount -= amount;
+
+			// Add new object with ID, code, amount and date to the state transactions array
+			transactionsCopy.push(
+
+				{ id: id, code: code, amount: (amount * -1), date: date }
+			);
+		}
+
+		// Update the state
+		this.setState({ currencies: currenciesCopy, transactions: transactionsCopy });
+
+		// Hide open modal
+		this.toggleModal(event);
 	}
 }
 
