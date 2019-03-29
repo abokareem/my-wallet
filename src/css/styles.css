@@ -602,6 +602,20 @@ h1 {
   opacity: 1;
 }
 
+.btn-side {
+  background-color: transparent;
+  text-align: right;
+  color: white;
+  margin: 0.25em;
+  text-decoration: none;
+  font-weight: normal;
+  transition: all 0.3s;
+}
+
+.btn-side:hover {
+  color: #F7832F;
+}
+
 .nav {
   display: flex;
   justify-content: flex-start;
@@ -759,6 +773,20 @@ tr:hover {
 }
 .card-pending > p {
   margin-top: 0;
+}
+
+.side-nav {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  bottom: 4em;
+  right: 1em;
+  background-color: #333645;
+  overflow-x: hidden;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */

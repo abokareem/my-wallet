@@ -1,0 +1,13 @@
+.side-nav {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 4em;
+    right: 1em;
+    background-color: $dark-blue;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+}

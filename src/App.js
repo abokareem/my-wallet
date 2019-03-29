@@ -19,19 +19,22 @@ class App extends Component {
 
 		// Data for transactions section
 		var transactions = [
-			{id: 0, code: 'BRL', amount: -94.75, date: (new Date(2019, 2, 25)).toDateString()},
-			{id: 1, code: 'BRL', amount: 84.43, date: (new Date(2019, 3, 26).toDateString())},
-			{id: 2, code: 'USD', amount: 15.12, date: (new Date(2019, 3, 29)).toDateString()},
+			{ id: 0, code: 'BRL', amount: -94.75, date: (new Date(2019, 2, 25)).toDateString() },
+			{ id: 1, code: 'BRL', amount: 84.43, date: (new Date(2019, 3, 26).toDateString()) },
+			{ id: 2, code: 'USD', amount: 15.12, date: (new Date(2019, 3, 29)).toDateString() },
 		]
 
 		// Data for pending transactions
 		var pending = [
-			{id: 0, code: 'BRL', amount: 78.14, date: (new Date(2019, 2, 25)).toDateString()},
-			{id: 1, code: 'BRL', amount: -6.99, date: (new Date(2019, 3, 26).toDateString())},
+			{ id: 0, code: 'BRL', amount: 78.14, date: (new Date(2019, 2, 25)).toDateString() },
+			{ id: 1, code: 'BRL', amount: -6.99, date: (new Date(2019, 3, 26).toDateString()) },
 		]
 
 		// Binding the headerClick method to the App object
 		this.headerClick = this.headerClick.bind(this);
+
+		// Binding the toggleNav method to the App object
+		this.toggleNav = this.toggleNav.bind(this);
 
 		// Initial state of myWallet
 		this.state = { currencies: currencies, transactions: transactions, pending: pending };
@@ -40,11 +43,11 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container bg-image">
-				<Header headerClick={this.headerClick}/>
-				<Nav currencies={this.state.currencies}/>
+				<Header headerClick={this.headerClick} />
+				<Nav currencies={this.state.currencies} />
 				<Carousel currencies={this.state.currencies} />
-				<Transactions transactions={this.state.transactions} pending={this.state.pending}/>
-				<More />
+				<Transactions transactions={this.state.transactions} pending={this.state.pending} />
+				<More toggleNav={this.toggleNav} />
 			</div>
 		);
 	}
@@ -80,7 +83,7 @@ class App extends Component {
 
 			// Change Pending text color
 			document.querySelector('.trans-container').firstChild.style.color = "white";
-			
+
 		} else {
 
 			// Unrotate button icon
@@ -110,7 +113,36 @@ class App extends Component {
 
 			// Change Pending text color
 			document.querySelector('.trans-container').firstChild.style.color = "#333645";
-		}		
+		}
+	}
+
+	toggleNav(event) {
+
+		// If sidenav closed, open it
+		if (event.target.getAttribute('data-open') === "false") {
+
+			// Change plus sign to minus sign
+			event.target.classList.remove('fa-plus');
+			event.target.classList.add('fa-minus');
+
+			// Save open status
+			event.target.setAttribute('data-open', 'true');
+
+			// Open nav
+			document.getElementById("side-nav").style.width = "auto";
+
+		} else {
+
+			// Change minus sign to plus sign
+			event.target.classList.remove('fa-minus');
+			event.target.classList.add('fa-plus');
+
+			// Save closed status
+			event.target.setAttribute('data-open', 'false');
+
+			// Close nav
+			document.getElementById("side-nav").style.width = "0";
+		}
 	}
 }
 
