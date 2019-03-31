@@ -8,6 +8,10 @@ table {
     background-color: white;
     border-radius: .5em;
     transition: all 0.3s ease 0s;
+
+    @include small-and-above {
+        margin: 0 auto;
+    }
 }
 
 th,

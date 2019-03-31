@@ -497,6 +497,13 @@ hr {
   scroll-behavior: smooth;
   padding-left: 1em;
 }
+@media only screen and (min-width: 48em) {
+  .cards {
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: center;
+  }
+}
 
 .hide {
   display: none;
@@ -510,6 +517,16 @@ hr {
   margin: 0 1em;
   padding: 0.25em 0.5em;
   font-weight: bold;
+}
+@media only screen and (min-width: 48em) {
+  .trans-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .trans-container > p {
+    text-align: center;
+  }
 }
 
 .trans-pending {
@@ -623,6 +640,12 @@ h1 {
   border-radius: 50%;
   opacity: 0.2;
   z-index: 2;
+}
+@media only screen and (min-width: 48em) {
+  .btn-more {
+    width: 3em;
+    height: 3em;
+  }
 }
 
 .btn-more:hover {
@@ -754,6 +777,11 @@ table {
     margin: 0;
   }
 }
+@media only screen and (min-width: 48em) {
+  table {
+    margin: 0 auto;
+  }
+}
 
 th,
 td {
@@ -841,6 +869,15 @@ tr:hover {
   display: flex;
   flex-direction: column;
   border-radius: 1em;
+}
+@media only screen and (min-width: 48em) {
+  .side-nav {
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    padding: 2em;
+  }
 }
 
 .modal {
