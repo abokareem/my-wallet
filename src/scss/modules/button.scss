@@ -66,11 +66,17 @@
     @include small-and-above {
         width: 3em;
         height: 3em;
+        opacity: 1;
     }
 }
 
 .btn-more:hover {
     opacity: 1;
+
+    @include small-and-above {
+        color: $orange;
+        border-color: $orange;
+    }
 }
 
 .btn-side {

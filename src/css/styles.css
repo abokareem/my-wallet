@@ -440,6 +440,11 @@ body {
   font-family: Noto Sans, Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
+@media only screen and (min-width: 48em) {
+  body {
+    background-color: #333645;
+  }
+}
 
 h1,
 h2,
@@ -482,6 +487,7 @@ hr {
   margin-left: auto;
   max-width: 1170px;
   height: 100vh;
+  background-color: white;
 }
 @media only screen and (min-width: 48em) {
   .container {
@@ -645,11 +651,18 @@ h1 {
   .btn-more {
     width: 3em;
     height: 3em;
+    opacity: 1;
   }
 }
 
 .btn-more:hover {
   opacity: 1;
+}
+@media only screen and (min-width: 48em) {
+  .btn-more:hover {
+    color: #F7832F;
+    border-color: #F7832F;
+  }
 }
 
 .btn-side {
