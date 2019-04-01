@@ -29,7 +29,7 @@ body {
     font-family: Noto Sans, Arial, Helvetica, sans-serif;
     font-weight: normal;
 
-    @include small-and-above {
+    @include medium-and-above {
         background-color: $dark-blue;
     }
 }

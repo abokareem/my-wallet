@@ -23,7 +23,7 @@ $gutter-margin: ($gutter / 2);
     scroll-behavior: smooth;
     padding-left: 1em;
 
-    @include small-and-above {
+    @include medium-and-above {
         flex-wrap: wrap;
         padding: 1em;
         justify-content: center;
@@ -32,6 +32,10 @@ $gutter-margin: ($gutter / 2);
 
 .hide {
     display: none;
+
+    @include small-and-above {
+        display: block;
+    }
 }
 
 .trans-container {

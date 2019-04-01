@@ -440,7 +440,7 @@ body {
   font-family: Noto Sans, Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   body {
     background-color: #333645;
   }
@@ -503,7 +503,7 @@ hr {
   scroll-behavior: smooth;
   padding-left: 1em;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   .cards {
     flex-wrap: wrap;
     padding: 1em;
@@ -513,6 +513,11 @@ hr {
 
 .hide {
   display: none;
+}
+@media only screen and (min-width: 48em) {
+  .hide {
+    display: block;
+  }
 }
 
 .trans-container {
@@ -604,6 +609,11 @@ h1 {
   height: 2em;
   border-radius: 50%;
 }
+@media only screen and (min-width: 48em) {
+  .btn-header {
+    display: none;
+  }
+}
 
 .btn-header:hover {
   color: white;
@@ -647,7 +657,7 @@ h1 {
   opacity: 0.2;
   z-index: 2;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   .btn-more {
     width: 3em;
     height: 3em;
@@ -658,7 +668,7 @@ h1 {
 .btn-more:hover {
   opacity: 1;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   .btn-more:hover {
     color: #F7832F;
     border-color: #F7832F;
@@ -713,6 +723,11 @@ h1 {
   align-items: flex-start;
   text-align: center;
   transition: all 0.3s ease 0s;
+}
+@media only screen and (min-width: 62em) {
+  .nav {
+    display: none;
+  }
 }
 
 .card-container {

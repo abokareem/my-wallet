@@ -19,6 +19,10 @@
     width: 2em;
     height: 2em;
     border-radius: 50%;
+
+    @include small-and-above {
+        display: none;
+    }
 }
 
 .btn-header:hover {
@@ -63,7 +67,7 @@
     opacity: 0.2;
     z-index: 2;
 
-    @include small-and-above {
+    @include medium-and-above {
         width: 3em;
         height: 3em;
         opacity: 1;
@@ -73,7 +77,7 @@
 .btn-more:hover {
     opacity: 1;
 
-    @include small-and-above {
+    @include medium-and-above {
         color: $orange;
         border-color: $orange;
     }
