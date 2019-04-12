@@ -2,6 +2,8 @@
 
 A web application where you consult your funds balance and transactions history in 3 currencies, USD, BRL and EUR. You have the ability to add or withdraw money in each of these currencies.
 
+The design was based [on this project by Michal Jarosz.](https://dribbble.com/shots/5812332)
+
 # What I Explored
 
 * React components with JSX
