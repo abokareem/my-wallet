@@ -10,3 +10,9 @@ The design was based [on this project by Michal Jarosz.](https://dribbble.com/sh
 * Manage React component state
 * React event handlers
 * Modular CSS with Sass
+
+# Suggested Improvements for V2
+
+* Multi-Page design with React Router
+* Use React Redux in some way
+* Login / Logout
